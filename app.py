@@ -82,7 +82,7 @@ html_content = """
             padding: 12px;
             border-radius: 6px;
             font-family: 'Courier New', Courier, monospace;
-            font-size: 8.5pt;
+            font-size: 8pt;
             white-space: pre-wrap;
             word-wrap: break-word;
             overflow-x: auto;
@@ -107,7 +107,7 @@ html_content = """
 
     <div class="section">
         <div class="section-title">1. Visão Geral & Métricas Chave</div>
-        <p>O Mini App de <strong>Poedeiras Caipiras (Ovos)</strong> foi projetado para calcular a eficiência de postura, consumo alimentar e lucratividade diária/mensal por dúzia de ovos produzida.</p>
+        <p>O Mini App de <strong>Poedeiras Caipiras (Ovos)</strong> calcula a eficiência de postura, consumo alimentar e lucratividade diária/mensal por dúzia de ovos produzida.</p>
         <ul>
             <li><strong>Taxa de Postura (%):</strong> (Ovos Coletados no Dia / Aves Vivas) × 100</li>
             <li><strong>Produção em Dúzias:</strong> Ovos Coletados / 12</li>
@@ -124,7 +124,7 @@ html_content = """
 st.set_page_config(page_title="MultVet Poedeiras Caipiras", page_icon="🥚", layout="centered")
 
 # Estilização Brand Board MultVet
-st.markdown("""
+st.markdown('''
     &lt;style&gt;
     .stApp { background-color: #F8F9FA; }
     h1, h2, h3 { color: #1B4D3E !important; }
@@ -136,7 +136,7 @@ st.markdown("""
         margin-bottom: 10px;
     }
     &lt;/style&gt;
-""", unsafe_allow_html=True)
+''', unsafe_allow_html=True)
 
 # Autenticação
 SENHA_CORRETA = "multvet2026"
@@ -221,15 +221,15 @@ with col_r2:
     </div>
 
     <div class="footer">
-        MultVet Agrotech — Módulo de Expansão: Avicultura de Postura Caipira 🥚
+        MultVet — Módulo de Expansão: Avicultura de Postura Caipira 🥚
     </div>
 
 </body>
 </html>
 """
 
-with open("multvet_poedeiras_caipiras.html", "w", encoding="utf-8") as f:
+with open("multvet_poedeiras_caipiras_v2.html", "w", encoding="utf-8") as f:
     f.write(html_content)
 
-HTML("multvet_poedeiras_caipiras.html").write_pdf("multvet_poedeiras_caipiras.pdf")
-print("PDF do Mini App Poedeiras gerado com sucesso!")
+HTML("multvet_poedeiras_caipiras_v2.html").write_pdf("multvet_poedeiras_caipiras_v2.pdf")
+print("PDF atualizado com sucesso!")
